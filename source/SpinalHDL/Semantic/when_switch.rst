@@ -175,6 +175,8 @@ Also, if all possible values are covered in your mux, you can omit the default v
      3 -> (io.src0)
    )
 
+Alternatively, if the behaviour for unassigned values is not important, they can be left as "don't care" by using ``muxListDc``. 
+
 ``muxLists(...)`` is another bitwise selection which takes a sequence of tuples as input. Below is an example of dividing a ``Bits`` of 128 bits into 32 bits:
 
 .. image:: /asset/picture/MuxList.png
@@ -191,3 +193,4 @@ Also, if all possible values are covered in your mux, you can omit the default v
 
    // A shorter way to do the same thing:
    val dataWord = data.subdivideIn(32 bits)(sel)
+
